@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.jeffrey.test">
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+
+    <application
+        android:icon="@mipmap/icon_"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".sharedpreferance.SharedPreferencesExample"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity_data_send.firstExercise.ImageViewExample" />
+        <activity android:name=".impliciti_intent_example.ImplicitIntentExample" />
+        <activity android:name=".activity_data_send.secondExercise.ShowData" />
+        <activity android:name=".activity_data_send.secondExercise.FirstActivity" />
+        <activity android:name=".product_example.Product" />
+        <activity android:name=".thread.UIThreadExample.UIThreadExample" />
+        <activity android:name=".sharedpreferance.SharedColorSave" />
+        <activity android:name=".thread.ThreadExample.ThreadExampleA" />
+        <activity android:name=".ExampleClassWork.pizza.PizzaActivity" />
+        <activity android:name=".ExampleClassWork.pizza.PizzaOrder" />
+        <activity android:name=".notification.NotificationExample" />
+        <activity android:name=".Fragmant.navegation_fragmant.rating_fragmant.RatingActivity" />
+
+        <receiver android:name=".notification.NotificationReciver" />
+
+        <activity android:name=".Fragmant.navegation_fragmant.navigation_fragmant.FragmentManagerActivity" />
+        <activity android:name=".Fragmant.navegation_fragmant.transfer_data_between_fragmant.DataHandlerActivity" />
+        <activity android:name=".Broadcast.BroadcastActivity" />
+        <activity android:name=".FireBase.FireBaseInit"></activity>
+    </application>
+
+</manifest>

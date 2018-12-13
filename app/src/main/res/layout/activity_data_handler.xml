@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragmant.navegation_fragmant.transfer_data_between_fragmant.DataHandlerActivity">
+
+    <fragment
+        android:id="@+id/fragment3"
+        android:name="com.example.jeffrey.test.Fragmant.navegation_fragmant.transfer_data_between_fragmant.BottomFragmant"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/bottom_fragmant" />
+
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.example.jeffrey.test.Fragmant.navegation_fragmant.transfer_data_between_fragmant.TopFragmant"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment3"
+        tools:layout="@layout/top_fragment" />
+</android.support.constraint.ConstraintLayout>

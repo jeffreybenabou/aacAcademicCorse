@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/askQestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="setTheButtons"
+                android:padding="0dp"
+                android:text="שאלות ותשובות" />
+
+            <Button
+                android:id="@+id/second_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="setTheButtons"
+                android:padding="0dp"
+                android:text="העברת נתונים בין פעילויות" />
+
+            <Button
+                android:id="@+id/fragmant_example_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="setTheButtons"
+                android:padding="0dp"
+                android:text="דוגמא נוספת לפרגמנט" />
+
+            <Button
+                android:id="@+id/fragmant_active"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="setTheButtons"
+                android:padding="0dp"
+                android:text="לתפריט fragmant דוגמאה" />
+
+            <Button
+                android:id="@+id/fragmant_data_transpert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="setTheButtons"
+                android:padding="0dp"
+                android:text="דוגמא להעברת נתונים בין פרגמנטים" />
+
+            <Button
+                android:id="@+id/third_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="setTheButtons"
+                android:padding="0dp"
+                android:text="דוגמא למוצר" />
+
+            <Button
+                android:id="@+id/implicit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="setTheButtons"
+                android:padding="0dp"
+                android:text="Implicit Intent" />
+
+            <Button
+                android:id="@+id/four1_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="setTheButtons"
+                android:padding="0dp"
+                android:text="שמירת צבעים" />
+
+            <Button
+                android:id="@+id/four2_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="setTheButtons"
+                android:padding="0dp"
+                android:text="שמירת כמות לחיצות" />
+
+            <Button
+                android:id="@+id/five1_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="setTheButtons"
+                android:padding="0dp"
+                android:text="דוגמא לתהליכון" />
+
+            <Button
+                android:id="@+id/five2_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="setTheButtons"
+                android:padding="0dp"
+                android:text="דוגמא ל UI thread" />
+
+            <Button
+                android:id="@+id/notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="setTheButtons"
+                android:text="הפעל התראה" />
+
+            <Button
+                android:id="@+id/pizza"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="setTheButtons"
+                android:text="אפליקציית פיצה" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>
