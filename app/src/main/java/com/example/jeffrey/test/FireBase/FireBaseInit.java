@@ -23,11 +23,12 @@ public class FireBaseInit extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_fire_base_init);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fire_base_fragment_to_change,qestionFragment).commit();
 
         loadDataBase();
         setTheFragmentSwitch();
-
 
     }
 
