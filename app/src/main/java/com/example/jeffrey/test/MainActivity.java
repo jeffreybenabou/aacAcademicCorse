@@ -5,19 +5,19 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.example.jeffrey.test.ExampleClassWork.pizza.PizzaActivity;
-import com.example.jeffrey.test.FireBase.FireBaseInit;
-import com.example.jeffrey.test.Fragmant.navegation_fragmant.navigation_fragmant.FragmentManagerActivity;
-import com.example.jeffrey.test.Fragmant.navegation_fragmant.rating_fragmant.RatingActivity;
-import com.example.jeffrey.test.Fragmant.navegation_fragmant.transfer_data_between_fragmant.DataHandlerActivity;
-import com.example.jeffrey.test.activity_data_send.secondExercise.FirstActivity;
+import com.example.jeffrey.test.data_send.secondExercise.FirstActivity;
+import com.example.jeffrey.test.firebase_example.FireBaseActivity;
+import com.example.jeffrey.test.fragment_example.navigation_fragmant.FragmentManagerActivity;
+import com.example.jeffrey.test.fragment_example.rating_fragmant.RatingActivity;
+import com.example.jeffrey.test.fragment_example.transfer_data_between_fragmant.DataHandlerActivity;
 import com.example.jeffrey.test.impliciti_intent_example.ImplicitIntentExample;
 import com.example.jeffrey.test.notification.NotificationExample;
+import com.example.jeffrey.test.pizza.PizzaActivity;
 import com.example.jeffrey.test.product_example.Product;
 import com.example.jeffrey.test.sharedpreferance.SharedColorSave;
 import com.example.jeffrey.test.sharedpreferance.SharedPreferencesExample;
-import com.example.jeffrey.test.thread.ThreadExample.ThreadExampleA;
-import com.example.jeffrey.test.thread.UIThreadExample.UIThreadExample;
+import com.example.jeffrey.test.thread.thread_example.ThreadExampleA;
+import com.example.jeffrey.test.thread.ui_thread_example.UIThreadExample;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,RatingActivity.class));
                 break;
             case R.id.askQestion:
-                startActivity(new Intent(MainActivity.this,FireBaseInit.class));
+                startActivity(new Intent(MainActivity.this,FireBaseActivity.class));
                 break;
 
 

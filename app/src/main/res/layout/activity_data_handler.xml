@@ -5,11 +5,11 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragmant.navegation_fragmant.transfer_data_between_fragmant.DataHandlerActivity">
+    tools:context=".fragment_example.transfer_data_between_fragmant.DataHandlerActivity">
 
     <fragment
         android:id="@+id/fragment3"
-        android:name="com.example.jeffrey.test.Fragmant.navegation_fragmant.transfer_data_between_fragmant.BottomFragmant"
+        android:name="com.example.jeffrey.test.fragment_example.transfer_data_between_fragmant.BottomFragmant"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
@@ -21,7 +21,7 @@
 
     <fragment
         android:id="@+id/fragment2"
-        android:name="com.example.jeffrey.test.Fragmant.navegation_fragmant.transfer_data_between_fragmant.TopFragmant"
+        android:name="com.example.jeffrey.test.fragment_example.transfer_data_between_fragmant.TopFragmant"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
