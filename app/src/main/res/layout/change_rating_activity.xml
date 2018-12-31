@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/first_fragmant"
-        android:name="com.example.jeffrey.test.fragment_example.rating_fragmant.FirstRatingFragmant"
+        android:name="com.example.jeffrey.academic.fragment_example.rating_fragmant.FirstRatingFragmant"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -23,7 +23,7 @@
 
     <fragment
         android:id="@+id/second_fragmant"
-        android:name="com.example.jeffrey.test.fragment_example.rating_fragmant.SecondRatingFragmant"
+        android:name="com.example.jeffrey.academic.fragment_example.rating_fragmant.SecondRatingFragmant"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"

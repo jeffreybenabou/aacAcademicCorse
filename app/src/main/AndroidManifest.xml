@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.jeffrey.test">
+    package="com.example.jeffrey.academic">
 
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -28,7 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".firebase_example.FireBaseActivity" />
+        <activity android:name=".firebase_example.answer_and_qestion.FireBaseActivity" />
         <activity android:name=".data_send.firstExercise.ImageViewExample" />
         <activity android:name=".impliciti_intent_example.ImplicitIntentExample" />
         <activity android:name=".data_send.secondExercise.ShowData" />
@@ -40,18 +40,19 @@
         <activity android:name=".pizza.PizzaActivity" />
         <activity android:name=".pizza.PizzaOrder" />
         <activity android:name=".notification.NotificationExample" />
-        <activity android:name=".fragment_example.navigation_fragmant.FragmentManagerActivity"/>
-        <activity android:name=".fragment_example.rating_fragmant.RatingActivity"/>
-        <activity android:name=".fragment_example.transfer_data_between_fragmant.DataHandlerActivity"/>
+        <activity android:name=".fragment_example.navigation_fragmant.FragmentManagerActivity" />
+        <activity android:name=".fragment_example.rating_fragmant.RatingActivity" />
+        <activity android:name=".fragment_example.transfer_data_between_fragmant.DataHandlerActivity" />
 
         <receiver android:name=".notification.NotificationReciver" />
 
-
-        <service android:name=".firebase_example.ServiceMessage">
+        <service android:name=".firebase_example.answer_and_qestion.ServiceMessage">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <activity android:name=".firebase_example.firebase_users_data_add_data_change.FireBaseExmaple"></activity>
     </application>
 
 </manifest>
