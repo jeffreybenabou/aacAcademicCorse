@@ -64,7 +64,10 @@ public class FireBaseActivity extends AppCompatActivity {
 
 
     private void loadDataBase() {
-        // TODO: 13/12/2018 מתודה שמאתחלת את האובייקט שלנו מסוג פיירבייס עם הגדרות נחוצות
+        // TODO: 13/12/2018 מתודה שמאתחלת את האובייקט שלנו מסוג פיירבייס עם ברירת מחדל
+        //  TODO:שמאפשרת למשתמש לשמור נתונים ולראות אותם
+        // TODO: 03/01/2019 גם כאשר אין למשתמש חיבור לאינטרנט
+
         database = FirebaseFirestore.getInstance();
         FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
                 .setTimestampsInSnapshotsEnabled(true)

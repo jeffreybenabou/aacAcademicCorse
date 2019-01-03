@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
@@ -17,6 +18,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreSettings;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -79,15 +82,13 @@ public class FireBaseExmaple extends AppCompatActivity {
             case R.id.add_new_data_to_firebase:
                 if(checkAllFieldHaveData())
                     addDataToFireBase();
+
+
                 break;
 
 
 
 
-
-            case R.id.change_data_button:
-
-                break;
 
 
 
@@ -150,9 +151,9 @@ public class FireBaseExmaple extends AppCompatActivity {
 
     private void addDataToFireBase() {
         // TODO: 30/12/2018 לאחר שווידנו שהערכים אינם רקים נבנה אובייקט מסוג מפה ונכניס לתוכו את הערך של
-        // TODO: 30/12/2018 השדה שלנו שנרצה שיהיה לנו במסד נתונים
+         // TODO: 30/12/2018 השדה שלנו שנרצה שיהיה לנו במסד נתונים
         // TODO: 31/12/2018 שימו לב שכל פעם שנשנה את הערך של "שדה" אז יתווסף לנו שדה חדש בפיירבייס
-            map.put(field.getText().toString(),fieldData.getText().toString());
+        map.put(field.getText().toString(),fieldData.getText().toString());
 
 
         // TODO: 30/12/2018 מה שעשינו פה הוא בעצם להכניס את הערכים מתוך הקלט אל תוך המסד נתונים שלנו
