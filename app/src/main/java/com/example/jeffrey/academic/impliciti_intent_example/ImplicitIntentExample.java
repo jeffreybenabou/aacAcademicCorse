@@ -21,13 +21,6 @@ public class ImplicitIntentExample extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.implicit_intent);
 
-
-
-
-
-
-
-
     }
 
 

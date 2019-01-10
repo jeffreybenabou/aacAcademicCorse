@@ -1,5 +1,6 @@
 package com.example.jeffrey.academic.firebase_example.answer_and_qestion;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;

@@ -11,9 +11,7 @@ import com.example.jeffrey.academic.R;
 
 public class FirstActivity extends AppCompatActivity {
 
-    private Button nextActivity;
     private EditText receiveTheUserName, receiveTheAgeOfUser;
-    private Intent intent;
     private String age;
     private String name;
 
@@ -38,7 +36,7 @@ public class FirstActivity extends AppCompatActivity {
     }
 
     private void defineTheButtonAction() {
-        nextActivity =findViewById(R.id.lessonNumber2_button);
+        Button nextActivity = findViewById(R.id.lessonNumber2_button);
         nextActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,7 +52,7 @@ public class FirstActivity extends AppCompatActivity {
     private void startTheShowDataActivity() {
         if (checkUserNameAndAge()) {
             setTheData();
-            intent = new Intent(FirstActivity.this, ShowData.class);
+            Intent intent = new Intent(FirstActivity.this, ShowData.class);
             intent.putExtra("name", name);
             intent.putExtra("age", age);
             startActivity(intent);

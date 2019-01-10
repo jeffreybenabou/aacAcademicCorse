@@ -48,6 +48,15 @@
                 android:text="שינוי נתונים firebase" />
 
             <Button
+                android:id="@+id/firebase_add_user_to_data_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="setTheButtons"
+                android:padding="0dp"
+                android:text="הוספת פרטי משתמש +תמונה" />
+
+            <Button
                 android:id="@+id/askQestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

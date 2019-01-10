@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.jeffrey.academic.data_send.secondExercise.FirstActivity;
+import com.example.jeffrey.academic.firebase_example.FireBaseInit;
+import com.example.jeffrey.academic.firebase_example.add_new_user_to_database.GetUserNameDetails;
 import com.example.jeffrey.academic.firebase_example.answer_and_qestion.FireBaseActivity;
 import com.example.jeffrey.academic.firebase_example.firebase_users_data_add_data_change.FireBaseExmaple;
 import com.example.jeffrey.academic.fragment_example.navigation_fragmant.FragmentManagerActivity;
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-
+        FireBaseInit.getInstance(this);
 
 
     }
@@ -40,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
         {
             case R.id.implicit:
                 startActivity(new Intent(MainActivity.this,ImplicitIntentExample.class));
+                break;
+            case R.id.firebase_add_user_to_data_base:
+                startActivity(new Intent(MainActivity.this,GetUserNameDetails.class));
                 break;
             case R.id.second_class:
                 startActivity(new Intent(MainActivity.this,FirstActivity.class));
@@ -85,20 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
 
 
 }

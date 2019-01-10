@@ -4,27 +4,22 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.jeffrey.academic.R;
+import com.example.jeffrey.academic.firebase_example.FireBaseInit;
+import com.example.jeffrey.academic.firebase_example.add_new_user_to_database.UserNameClass;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
+
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreSettings;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
+
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class FireBaseExmaple extends AppCompatActivity {
@@ -32,29 +27,25 @@ public class FireBaseExmaple extends AppCompatActivity {
 
     // TODO: 31/12/2018 אובייקט מסוג מפה אשר יכיל בתוכו את הערכים שנרצה להוסיף אל הדאטה בייס
     private Map<String,Object>map=new HashMap<>();
-    private FirebaseUser user;
-
-    private List<AuthUI.IdpConfig> providers = Collections.singletonList(
-
-            new AuthUI.IdpConfig.GoogleBuilder().build());
-
-    private FirebaseFirestore database;
+    private FireBaseInit singalton;
     private EditText collection,document,field,fieldData;
     private ArrayList<EditText>editTexts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        singalton=FireBaseInit.getInstance(this);
         setContentView(R.layout.activity_firebase_remove_data);
-
-
         setTheEditTexts();
-        loadDataBase();
+
+
 
 
     }
 
     private void setTheEditTexts() {
+
+
         // TODO: 30/12/2018 מתודה שתפקידה היא לטעון את כל הפקדים שלנו אל תוך מערך ולאחר מכן לרוץ על הפקדים ולראות אם הם רקים או לא
         // TODO: 31/12/2018 זה בעצם גורם לקוד שלנו להתקצר בהרבה ולייעל את עצמנו בתור מפתחים
         // TODO: 31/12/2018 כאשר בהמשך אנחנו נשתמש במערך הזה על מנת לבדוק אם הערך שבתוך הפקד הוא ריק או לא
@@ -97,7 +88,7 @@ public class FireBaseExmaple extends AppCompatActivity {
 
 
             case R.id.connect_firebase:
-                if(user==null)
+                if(singalton.user==null)
                     connectToFireBase();
                 else
                     Toast.makeText(this,"משתמש כבר מחובר",Toast.LENGTH_LONG).show();
@@ -110,7 +101,7 @@ public class FireBaseExmaple extends AppCompatActivity {
 
 
             case R.id.sign_out:
-                if(user!=null)
+                if(singalton.user!=null)
                     signOut();
                 else
                     Toast.makeText(this,"אין משתמש מחובר",Toast.LENGTH_LONG).show();
@@ -122,9 +113,9 @@ public class FireBaseExmaple extends AppCompatActivity {
 
 
             case R.id.delete_user:
-                if(user!=null)
+                if(singalton.user!=null)
                 {
-                    final String userName=user.getDisplayName();
+                    final String userName=singalton.user.getDisplayName();
 
                                     AuthUI.getInstance()
                                             .delete(FireBaseExmaple.this)
@@ -144,7 +135,7 @@ public class FireBaseExmaple extends AppCompatActivity {
                 break;
 
         }
-        user = FirebaseAuth.getInstance().getCurrentUser();
+        singalton.user = FirebaseAuth.getInstance().getCurrentUser();
     }
 
 
@@ -158,7 +149,7 @@ public class FireBaseExmaple extends AppCompatActivity {
 
         // TODO: 30/12/2018 מה שעשינו פה הוא בעצם להכניס את הערכים מתוך הקלט אל תוך המסד נתונים שלנו
         // TODO: 31/12/2018   האובייקטים שניתן להכניס אל מסד נתונים הם אובייקטים מסוג מחלקות גאווה או מפות
-        database.collection(collection.getText().toString())
+        singalton.database.collection(collection.getText().toString())
                 .document(document.getText().toString())
                 .set(map).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
@@ -182,9 +173,9 @@ public class FireBaseExmaple extends AppCompatActivity {
 
     private void connectToFireBase() {
         startActivityForResult(
-                AuthUI.getInstance()
-                        .createSignInIntentBuilder()
-                        .setAvailableProviders(providers)
+                        AuthUI.getInstance()
+                                .createSignInIntentBuilder()
+                        .setAvailableProviders(singalton.providers)
                         .build(),
                 0);
     }
@@ -203,15 +194,7 @@ public class FireBaseExmaple extends AppCompatActivity {
     }
 
 
-    private void loadDataBase() {
-        // TODO: 13/12/2018 מתודה שמאתחלת את האובייקט שלנו מסוג פיירבייס עם הגדרות נחוצות
-        database = FirebaseFirestore.getInstance();
-        FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
-                .setTimestampsInSnapshotsEnabled(true)
-                .build();
-        database.setFirestoreSettings(settings);
 
-    }
 
 
     @Override
@@ -222,10 +205,9 @@ public class FireBaseExmaple extends AppCompatActivity {
 
 
             if (resultCode == RESULT_OK) {
-                user = FirebaseAuth.getInstance().getCurrentUser();
-                Toast.makeText(FireBaseExmaple.this,"ברוך הבא "+user.getDisplayName(),Toast.LENGTH_LONG).show();
-
-            } else {
+                singalton. user = FirebaseAuth.getInstance().getCurrentUser();
+                assert singalton.user != null;
+                Toast.makeText(FireBaseExmaple.this,"ברוך הבא "+singalton.user.getDisplayName(),Toast.LENGTH_LONG).show();
 
             }
         }

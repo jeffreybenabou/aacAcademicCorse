@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.jeffrey.academic">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
@@ -52,7 +54,9 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".firebase_example.firebase_users_data_add_data_change.FireBaseExmaple"></activity>
+        <activity android:name=".firebase_example.firebase_users_data_add_data_change.FireBaseExmaple" />
+        <activity android:name=".firebase_example.add_new_user_to_database.GetUserNameDetails" />
+        <activity android:name=".firebase_example.add_new_user_to_database.ShowUsersOnFireBase"></activity>
     </application>
 
 </manifest>
