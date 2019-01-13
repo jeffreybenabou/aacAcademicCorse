@@ -14,10 +14,12 @@ import android.view.ViewGroup;
 import com.example.jeffrey.academic.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.FirebaseFirestoreSettings;
+import com.google.firebase.firestore.ListenerRegistration;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.io.Serializable;
@@ -87,10 +89,20 @@ public class AnswerFragment extends Fragment implements Serializable {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                // TODO: 15/12/2018 כאן אנחנו ניגשים אל האוסף שקוראים לו studentqestions   
-                // TODO: 15/12/2018 ולוקחים את כל השאלות שנשאלו וטוענים אותם אל תוך אובייקט מסוג מחלקת תשובות שזוהי מחלקה שיצרתי והיא מייצגת לי אוייבקט של שאלה ותשובה 
-                answerQestionClasses=new ArrayList<>();
 
+
+
+
+
+                        // TODO: 15/12/2018 כאן אנחנו ניגשים אל האוסף שקוראים לו studentqestions
+                // TODO: 15/12/2018 ולוקחים את כל השאלות שנשאלו וטוענים אותם אל תוך אובייקט מסוג מחלקת תשובות שזוהי מחלקה שיצרתי והיא מייצגת לי אוייבקט של שאלה ותשובה
+                answerQestionClasses=new ArrayList<>();
+                database.collection("studentqestions").document("sf").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+
+                    }
+                });
                 database.collection("studentqestions").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {

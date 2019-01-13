@@ -16,6 +16,8 @@ import com.example.jeffrey.academic.R;
 import com.example.jeffrey.academic.firebase_example.FireBaseInit;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.ListenerRegistration;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
@@ -24,6 +26,7 @@ public class ShowUsersOnFireBase extends AppCompatActivity {
 
 
     private ArrayList<String> arraySpinner ;
+    private ArrayList<UserNameClass>allUserNames;
     private Spinner spinner;
 
     // TODO: 10/01/2019 בעזרת הפריסה הזו נוכל לבצע עידכון ללייאוט
@@ -32,9 +35,11 @@ public class ShowUsersOnFireBase extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_show_users_on_fire_base);
         setTheRefreshMethod();
         defineTheSpinner();
+
 
     }
 
@@ -54,20 +59,23 @@ public class ShowUsersOnFireBase extends AppCompatActivity {
     }
 
     private void defineTheSpinner() {
-        setTheSpinnerLiseners();
         setTheSpinnerItemsFromServer();
+        setTheSpinnerLiseners();
+
     }
 
     private void setTheSpinnerItemsFromServer() {
         // TODO: 10/01/2019 טוען אל תוך התיבה הנפתחת את שמות המשתמשים שלנו שקיימים במאגר נתונים
-        FireBaseInit.fireBaseInit.database.collection("users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                arraySpinner=new ArrayList<>();
-                for (int i = 0; i <task.getResult().getDocuments().size() ; i++) {
-                    UserNameClass userNameClass=task.getResult().getDocuments().get(i).toObject(UserNameClass.class);
-                    arraySpinner.add(userNameClass.getName());
-                }
+                FireBaseInit.fireBaseInit.database.collection("users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        arraySpinner=new ArrayList<>();
+                        allUserNames=new ArrayList<>();
+                        for (int i = 0; i <task.getResult().getDocuments().size() ; i++) {
+                            UserNameClass userNameClass=task.getResult().getDocuments().get(i).toObject(UserNameClass.class);
+                            arraySpinner.add(userNameClass.getName());
+                            allUserNames.add(userNameClass);
+                        }
 
                 // TODO: 10/01/2019 טעינת ערכים אל תוך מתאם שהתביה תשתמש בה
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(ShowUsersOnFireBase.this,
@@ -87,14 +95,7 @@ public class ShowUsersOnFireBase extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, final int position, long id) {
-                FireBaseInit.fireBaseInit.database.collection("users")
-                        .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        UserNameClass userNameClass=task.getResult().getDocuments().get(position).toObject(UserNameClass.class);
-                        setTheData(userNameClass);
-                    }
-                });
+                setTheData(allUserNames.get(position));
             }
 
             @Override

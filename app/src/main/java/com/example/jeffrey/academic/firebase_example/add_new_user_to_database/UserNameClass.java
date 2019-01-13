@@ -1,56 +1,38 @@
 package com.example.jeffrey.academic.firebase_example.add_new_user_to_database;
 
 import android.app.Activity;
-import android.content.Context;
+
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Movie;
-import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
-import android.util.Log;
+
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
-import com.example.jeffrey.academic.MainActivity;
 import com.example.jeffrey.academic.R;
 import com.example.jeffrey.academic.firebase_example.FireBaseInit;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.core.SnapshotHolder;
-import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.ListenerRegistration;
-import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.squareup.picasso.Picasso;
 
-import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-import java.net.URLConnection;
 
-import javax.annotation.Nullable;
-
-import retrofit2.http.Url;
 
 public class UserNameClass {
 
     private String name;
     private String phone;
     private String area;
+
+
 
 
     // TODO: 10/01/2019 שומר את נתיב התמונה שלנו בשרת
@@ -121,13 +103,13 @@ public class UserNameClass {
         UploadTask uploadTask = imagesRef.putBytes(data);
         setTheUploadTaskLiseners(context,uploadTask);
 
-        uploadTask.addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception exception) {
-                Toast.makeText(context,"פעולה לא הצליחה",Toast.LENGTH_SHORT).show();
+                uploadTask.addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        Toast.makeText(context,"פעולה לא הצליחה",Toast.LENGTH_SHORT).show();
 
-            }
-        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    }
+                }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
@@ -144,6 +126,7 @@ public class UserNameClass {
             @Override
             public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
                 setTheProgressBar(context,taskSnapshot.getTotalByteCount(),taskSnapshot.getBytesTransferred());
+
             }
         });
     }
@@ -159,7 +142,7 @@ public class UserNameClass {
     private void moveToNextActivity(Activity context) {
         context.finish();
         context.startActivity(new Intent(context,ShowUsersOnFireBase.class));
-    }
+}
 
     public String getName() {
         return name;

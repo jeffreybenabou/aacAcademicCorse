@@ -111,6 +111,7 @@ public class GetUserNameDetails extends AppCompatActivity {
                 .add(userNameClass).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
             @Override
             public void onComplete(@NonNull Task<DocumentReference> task) {
+                task.getResult().set(userNameClass);
                 userNameClass.putImageInServerWithInputStream(GetUserNameDetails.this,data);
             }
         });
