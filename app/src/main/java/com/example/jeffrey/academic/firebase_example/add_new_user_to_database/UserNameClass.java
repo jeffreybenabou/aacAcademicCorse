@@ -62,15 +62,16 @@ public class UserNameClass {
         /// TODO: 10/01/2019 מתודה שמופעלת לאחר ששמרנו נתונים בשרת
 
         // TODO: 10/01/2019 גישה אל התמונה שלנו בשרת דרך הנתיב
-        FireBaseInit.fireBaseInit.storageRef.child(imagesRefPath).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-            @Override
-            public void onSuccess(Uri uri) {
+        
+                FireBaseInit.getFireBaseInit().getStorageRef().child(imagesRefPath).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
 
-                // TODO: 10/01/2019 שימוש בספרייה חיצונית שטוענת את הקישור אל תוך אובייקט מסוג אימגווי
-                // TODO: 10/01/2019    יש שימוש בגיפ שיוצג כרקע התמונה כל עוד התמונה לא נטענה
-                Glide.with(imageView).load(uri)
-                        .thumbnail(Glide.with(imageView).load(R.drawable.mygif))
-                        .into(imageView);
+                        // TODO: 10/01/2019 שימוש בספרייה חיצונית שטוענת את הקישור אל תוך אובייקט מסוג אימגווי
+                        // TODO: 10/01/2019    יש שימוש בגיפ שיוצג כרקע התמונה כל עוד התמונה לא נטענה
+                        Glide.with(imageView).load(uri)
+                                .thumbnail(Glide.with(imageView).load(R.drawable.mygif))
+                                .into(imageView);
 
             }
         }).addOnFailureListener(new OnFailureListener() {
@@ -87,7 +88,7 @@ public class UserNameClass {
     public void putImageInServerWithInputStream(final Activity context, Uri imagePath) {
 
         // TODO: 10/01/2019 טעינת תמונה אל השרת באמצעות נתיב התמונה שבחרנו
-        StorageReference imagesRef = FireBaseInit.fireBaseInit.storageRef.child(imagesRefPath);
+        StorageReference imagesRef = FireBaseInit.getFireBaseInit().getStorageRef().child(imagesRefPath);
         Bitmap bitmap = null;
         try {
             bitmap = MediaStore.Images.Media.getBitmap(context.getContentResolver(), imagePath);

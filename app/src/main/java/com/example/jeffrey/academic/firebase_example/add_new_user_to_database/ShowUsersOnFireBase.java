@@ -66,7 +66,7 @@ public class ShowUsersOnFireBase extends AppCompatActivity {
 
     private void setTheSpinnerItemsFromServer() {
         // TODO: 10/01/2019 טוען אל תוך התיבה הנפתחת את שמות המשתמשים שלנו שקיימים במאגר נתונים
-                FireBaseInit.fireBaseInit.database.collection("users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                FireBaseInit.getFireBaseInit().getDatabase().collection("users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         arraySpinner=new ArrayList<>();

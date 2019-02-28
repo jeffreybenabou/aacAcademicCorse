@@ -149,7 +149,7 @@ public class FireBaseExmaple extends AppCompatActivity {
 
         // TODO: 30/12/2018 מה שעשינו פה הוא בעצם להכניס את הערכים מתוך הקלט אל תוך המסד נתונים שלנו
         // TODO: 31/12/2018   האובייקטים שניתן להכניס אל מסד נתונים הם אובייקטים מסוג מחלקות גאווה או מפות
-        singalton.database.collection(collection.getText().toString())
+        singalton.getDatabase().collection(collection.getText().toString())
                 .document(document.getText().toString())
                 .set(map).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override

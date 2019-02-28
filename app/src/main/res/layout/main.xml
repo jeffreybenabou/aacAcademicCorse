@@ -48,6 +48,15 @@
                 android:text="שינוי נתונים firebase" />
 
             <Button
+                android:id="@+id/recyclerview_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="setTheButtons"
+                android:padding="0dp"
+                android:text="דוגמא ל recyclerView" />
+
+            <Button
                 android:id="@+id/firebase_add_user_to_data_base"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

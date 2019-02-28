@@ -18,6 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".recycler_view.ActivityRecyclerViewExample"></activity>
         <activity
             android:name=".sharedpreferance.SharedPreferencesExample"
             android:label="@string/app_name" />
@@ -56,7 +57,7 @@
 
         <activity android:name=".firebase_example.firebase_users_data_add_data_change.FireBaseExmaple" />
         <activity android:name=".firebase_example.add_new_user_to_database.GetUserNameDetails" />
-        <activity android:name=".firebase_example.add_new_user_to_database.ShowUsersOnFireBase"></activity>
+        <activity android:name=".firebase_example.add_new_user_to_database.ShowUsersOnFireBase" />
     </application>
 
 </manifest>

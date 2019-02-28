@@ -17,6 +17,7 @@ import com.example.jeffrey.academic.impliciti_intent_example.ImplicitIntentExamp
 import com.example.jeffrey.academic.notification.NotificationExample;
 import com.example.jeffrey.academic.pizza.PizzaActivity;
 import com.example.jeffrey.academic.product_example.Product;
+import com.example.jeffrey.academic.recycler_view.ActivityRecyclerViewExample;
 import com.example.jeffrey.academic.sharedpreferance.SharedColorSave;
 import com.example.jeffrey.academic.sharedpreferance.SharedPreferencesExample;
 import com.example.jeffrey.academic.thread.thread_example.ThreadExampleA;
@@ -40,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
 
         switch (view.getId())
         {
+            case R.id.recyclerview_example:
+                startActivity(new Intent(MainActivity.this, ActivityRecyclerViewExample.class));
+
+                break;
             case R.id.implicit:
                 startActivity(new Intent(MainActivity.this,ImplicitIntentExample.class));
                 break;

@@ -20,16 +20,16 @@ import java.util.List;
 
 public class FireBaseInit  {
 
-    public static FireBaseInit fireBaseInit = null;
+    private static FireBaseInit fireBaseInit = null;
     public FirebaseUser user;
 
     public List<AuthUI.IdpConfig> providers = Collections.singletonList(
 
             new AuthUI.IdpConfig.GoogleBuilder().build());
-    public FirebaseStorage storage;
+    private FirebaseStorage storage;
 
-    public StorageReference storageRef;
-    public FirebaseFirestore database;
+    private StorageReference storageRef;
+    private FirebaseFirestore database;
     private Context context;
 
 
@@ -72,4 +72,59 @@ public class FireBaseInit  {
     }
 
 
+    public Context getContext() {
+        return context;
+    }
+
+    public void setContext(Context context) {
+        this.context = context;
+    }
+
+    public static FireBaseInit getFireBaseInit() {
+        return fireBaseInit;
+    }
+
+    public static void setFireBaseInit(FireBaseInit fireBaseInit) {
+        FireBaseInit.fireBaseInit = fireBaseInit;
+    }
+
+    public FirebaseUser getUser() {
+        return user;
+    }
+
+    public void setUser(FirebaseUser user) {
+        this.user = user;
+    }
+
+    public List<AuthUI.IdpConfig> getProviders() {
+        return providers;
+    }
+
+    public void setProviders(List<AuthUI.IdpConfig> providers) {
+        this.providers = providers;
+    }
+
+    public FirebaseStorage getStorage() {
+        return storage;
+    }
+
+    public void setStorage(FirebaseStorage storage) {
+        this.storage = storage;
+    }
+
+    public StorageReference getStorageRef() {
+        return storageRef;
+    }
+
+    public void setStorageRef(StorageReference storageRef) {
+        this.storageRef = storageRef;
+    }
+
+    public FirebaseFirestore getDatabase() {
+        return database;
+    }
+
+    public void setDatabase(FirebaseFirestore database) {
+        this.database = database;
+    }
 }

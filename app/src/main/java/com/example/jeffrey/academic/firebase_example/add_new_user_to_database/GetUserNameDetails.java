@@ -107,7 +107,7 @@ public class GetUserNameDetails extends AppCompatActivity {
                 ,editTexts.get(2).getText().toString(),
         editTexts.get(0).getText().toString()+"/profileimage.jpeg");
 
-        FireBaseInit.fireBaseInit.database.collection("users")
+        FireBaseInit.getFireBaseInit().getDatabase().collection("users")
                 .add(userNameClass).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
             @Override
             public void onComplete(@NonNull Task<DocumentReference> task) {
