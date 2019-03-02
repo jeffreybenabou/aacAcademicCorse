@@ -29,7 +29,7 @@ public class BottomFragmant extends Fragment {
     private void defineTheComponent(View view) {
         // TODO: 05/12/2018 view הוא בעצם האובייקט שמכיל לנו את תבנית העיצוב שלנו
         imageView=view.findViewById(R.id.image_of_user);
-        name=view.findViewById(R.id.first_name);
+        name=view.findViewById(R.id.first_name_in_end_semester);
         lastName=view.findViewById(R.id.last_name);
         location=view.findViewById(R.id.location);
     }

@@ -48,6 +48,15 @@
                 android:text="שינוי נתונים firebase" />
 
             <Button
+                android:id="@+id/end_semester_work"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="setTheButtons"
+                android:padding="0dp"
+                android:text="עבודת סוף סמסטר" />
+
+            <Button
                 android:id="@+id/recyclerview_example"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

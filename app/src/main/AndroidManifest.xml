@@ -18,7 +18,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".recycler_view.ActivityRecyclerViewExample"></activity>
+        <activity android:name=".final_assignment_first_semester.DestinationActivity"></activity>
+        <activity android:name=".final_assignment_first_semester.ItemsActivity" />
+        <activity android:name=".final_assignment_first_semester.LoginActivity" />
+        <activity android:name=".final_assignment_first_semester.SplashActivity" />
+        <activity android:name=".recycler_view.ActivityRecyclerViewExample" />
         <activity
             android:name=".sharedpreferance.SharedPreferencesExample"
             android:label="@string/app_name" />

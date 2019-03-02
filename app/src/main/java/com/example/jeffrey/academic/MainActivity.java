@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.jeffrey.academic.data_send.secondExercise.FirstActivity;
+import com.example.jeffrey.academic.final_assignment_first_semester.SplashActivity;
 import com.example.jeffrey.academic.firebase_example.FireBaseInit;
 import com.example.jeffrey.academic.firebase_example.add_new_user_to_database.GetUserNameDetails;
 import com.example.jeffrey.academic.firebase_example.answer_and_qestion.FireBaseActivity;
@@ -41,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
 
         switch (view.getId())
         {
+            case R.id.end_semester_work:
+                startActivity(new Intent(MainActivity.this, SplashActivity.class));
+
+                break;
+
             case R.id.recyclerview_example:
                 startActivity(new Intent(MainActivity.this, ActivityRecyclerViewExample.class));
 
