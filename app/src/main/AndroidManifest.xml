@@ -18,7 +18,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".final_assignment_first_semester.DestinationActivity"></activity>
+        <activity
+            android:name=".fragment_example.transfer_data_between_fragmant_from_class.MyDrawerActivity"
+            android:label="@string/title_activity_my_drawer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".final_assignment_first_semester.DestinationActivity" />
         <activity android:name=".final_assignment_first_semester.ItemsActivity" />
         <activity android:name=".final_assignment_first_semester.LoginActivity" />
         <activity android:name=".final_assignment_first_semester.SplashActivity" />

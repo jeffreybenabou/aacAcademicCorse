@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment_example.transfer_data_between_fragmant_from_class.AddNewUsers">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:text="כאן יהיה מסך הוספת משתמשים של מנהל כלשהוא " />
+
+        <EditText
+            android:id="@+id/enter_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="הוספת שם פרטי"
+            android:inputType="textPersonName"
+            android:padding="30dp" />
+
+        <EditText
+            android:id="@+id/enter_last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="הוספת שם משפחה"
+            android:inputType="textPersonName"
+            android:padding="30dp" />
+
+        <EditText
+            android:id="@+id/enter_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="הוספת מספר פלאפון"
+            android:inputType="textPersonName"
+            android:padding="30dp" />
+
+        <Button
+            android:id="@+id/add_users"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:text="אשר משתמש" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

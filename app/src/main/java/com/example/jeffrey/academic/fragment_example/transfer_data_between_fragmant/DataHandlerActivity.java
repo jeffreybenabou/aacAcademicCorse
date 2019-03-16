@@ -22,4 +22,6 @@ public class DataHandlerActivity extends AppCompatActivity implements TopFragman
     public void whichComponentIsChecked(boolean name, boolean lastName, boolean location, boolean image) {
         bottomFragmant.showComponent(name,lastName,location,image);
     }
+
+
 }

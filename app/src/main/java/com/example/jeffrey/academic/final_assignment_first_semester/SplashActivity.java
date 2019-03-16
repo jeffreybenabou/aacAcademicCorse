@@ -5,7 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 
+
 import com.example.jeffrey.academic.R;
+import com.example.jeffrey.academic.recycler_view.RecyclerViewExample;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -31,4 +33,8 @@ public class SplashActivity extends AppCompatActivity {
             }
         }).start();
     }
+
+
+
+
 }
