@@ -38,6 +38,7 @@ public class RecyclerViewClass extends android.support.v7.widget.RecyclerView.Ad
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+        
         viewHolder.area.setText(allUsers.get(i).getFirstName());
         viewHolder.name.setText(allUsers.get(i).getLastName());
         viewHolder.number.setText(allUsers.get(i).getPhoneNumber());

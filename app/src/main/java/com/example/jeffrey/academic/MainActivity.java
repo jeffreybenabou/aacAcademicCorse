@@ -20,6 +20,9 @@ import com.example.jeffrey.academic.notification.NotificationExample;
 import com.example.jeffrey.academic.pizza.PizzaActivity;
 import com.example.jeffrey.academic.product_example.Product;
 import com.example.jeffrey.academic.recycler_view.ActivityRecyclerViewExample;
+import com.example.jeffrey.academic.restaurant_menu.MenuActivity;
+import com.example.jeffrey.academic.sensors.AccelerometerActivity;
+import com.example.jeffrey.academic.sensors.LocationActivity;
 import com.example.jeffrey.academic.sharedpreferance.SharedColorSave;
 import com.example.jeffrey.academic.sharedpreferance.SharedPreferencesExample;
 import com.example.jeffrey.academic.thread.thread_example.ThreadExampleA;
@@ -43,6 +46,15 @@ public class MainActivity extends AppCompatActivity {
 
         switch (view.getId())
         {
+            case R.id.gps:
+                startActivity(new Intent(MainActivity.this, LocationActivity.class));
+                break;
+            case R.id.accelerometer:
+                startActivity(new Intent(MainActivity.this, AccelerometerActivity.class));
+                break;
+            case R.id.menu:
+                startActivity(new Intent(MainActivity.this, MenuActivity.class));
+                break;
             case R.id.last_fragment_class:
                 startActivity(new Intent(MainActivity.this, MyDrawerActivity.class));
                 break;

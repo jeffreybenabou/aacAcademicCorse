@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+
+            android:id="@+id/main_course"
+            android:icon="@drawable/ic_pudding_dessert"
+            android:title="תפריט עיקריות" />
+        <item
+            android:id="@+id/hamborger_course"
+            android:icon="@drawable/ic_drink"
+            android:title="תפריט המבורגרים" />
+        <item
+            android:id="@+id/hot_drink"
+            android:icon="@drawable/ic_coffee"
+            android:title="שתיה חמה" />
+        <item
+        android:id="@+id/cold_drink"
+        android:icon="@drawable/ic_glasses"
+        android:title="שתיה קרה" />
+        <item
+            android:id="@+id/alcohool"
+            android:icon="@drawable/ic_alcohol"
+            android:title="אלכוהול" />
+        <item
+            android:id="@+id/coctail"
+            android:icon="@drawable/ic_bar"
+            android:title="קוקטליים" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="צור קשר" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="פייסבוק" />
+        </menu>
+    </item>
+
+</menu>

@@ -48,6 +48,32 @@
                 android:text="שיעור הפרגמנטים האחרון" />
 
             <Button
+                android:id="@+id/accelerometer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="setTheButtons"
+                android:padding="0dp"
+                android:text="סנסורים" />
+            <Button
+                android:id="@+id/gps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="setTheButtons"
+                android:padding="0dp"
+                android:text="מיקום gps" />
+
+            <Button
+                android:id="@+id/menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="setTheButtons"
+                android:padding="0dp"
+                android:text="אפליקצית תפריט" />
+
+            <Button
                 android:id="@+id/firebase_change_data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
