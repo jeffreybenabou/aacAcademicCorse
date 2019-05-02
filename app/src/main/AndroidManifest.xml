@@ -11,6 +11,7 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <uses-feature android:name="android.hardware.location.gps" />
 
     <application
@@ -20,7 +21,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".sensors.LocationActivity"/>
+        <service
+            android:name=".services.MusicService"
+            ></service>
+
+        <activity android:name=".services.MediaPlayerActivity" />
+        <activity android:name=".sensors.LocationActivity" />
         <activity android:name=".sensors.AccelerometerActivity" />
         <activity
             android:name=".restaurant_menu.MenuActivity"
@@ -64,12 +70,13 @@
         <activity android:name=".fragment_example.transfer_data_between_fragmant.DataHandlerActivity" />
 
         <receiver android:name=".notification.NotificationReciver" />
-
+        <receiver android:name=".services.MusicHandler" />
         <service android:name=".firebase_example.answer_and_qestion.ServiceMessage">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
 
         <activity android:name=".firebase_example.firebase_users_data_add_data_change.FireBaseExmaple" />
         <activity android:name=".firebase_example.add_new_user_to_database.GetUserNameDetails" />

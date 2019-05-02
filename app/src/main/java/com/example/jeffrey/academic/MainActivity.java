@@ -23,6 +23,7 @@ import com.example.jeffrey.academic.recycler_view.ActivityRecyclerViewExample;
 import com.example.jeffrey.academic.restaurant_menu.MenuActivity;
 import com.example.jeffrey.academic.sensors.AccelerometerActivity;
 import com.example.jeffrey.academic.sensors.LocationActivity;
+import com.example.jeffrey.academic.services.MediaPlayerActivity;
 import com.example.jeffrey.academic.sharedpreferance.SharedColorSave;
 import com.example.jeffrey.academic.sharedpreferance.SharedPreferencesExample;
 import com.example.jeffrey.academic.thread.thread_example.ThreadExampleA;
@@ -48,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
         {
             case R.id.gps:
                 startActivity(new Intent(MainActivity.this, LocationActivity.class));
+                break;
+            case R.id.services:
+                startActivity(new Intent(MainActivity.this, MediaPlayerActivity.class));
                 break;
             case R.id.accelerometer:
                 startActivity(new Intent(MainActivity.this, AccelerometerActivity.class));

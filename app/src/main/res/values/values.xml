@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="alcoholDesc">
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+    </array>
+
+    <array name="alcoholPrice">
+        <item >
+            120
+        </item>
+        <item >
+            15
+        </item>
+        <item >
+           30
+        </item>
+        <item >
+           45
+        </item>
+        <item >
+            50
+        </item>
+        <item >
+          85
+        </item>
+        <item >
+            75
+        </item>
+        <item >
+           25
+        </item>
+        <item >
+            35
+        </item>
+        <item >
+75
+        </item>
+    </array>
+
+    <array name="alcoholName">
+        <item >
+            beer
+        </item>
+        <item >
+            beer
+        </item>
+        <item >
+            beer
+        </item>
+        <item >
+            beer
+        </item>
+        <item >
+            beer
+        </item>
+        <item >
+            beer
+        </item>
+        <item >
+            beer
+        </item>
+        <item >
+            beer
+        </item>
+        <item >
+            beer
+        </item>
+        <item >
+            beer
+        </item>
+    </array>
+
+    <array name="mainDesc">
+        <item >
+           מנה ראשית
+        </item>
+        <item >
+            מנה ראשית
+        </item>
+        <item >
+            מנה ראשית
+        </item>
+        <item >
+            מנה ראשית
+        </item>
+        <item >
+            מנה ראשית
+        </item>
+        <item >
+            מנה ראשית
+        </item>
+        <item >
+            מנה ראשית
+        </item>
+        <item >
+            מנה ראשית
+        </item>
+        <item >
+            מנה ראשית
+        </item>
+        <item >
+            מנה ראשית
+        </item>
+    </array>
+
+    <array name="mainPrice">
+        <item >
+            120
+        </item>
+        <item >
+            15
+        </item>
+        <item >
+            30
+        </item>
+        <item >
+            45
+        </item>
+        <item >
+            50
+        </item>
+        <item >
+            85
+        </item>
+        <item >
+            75
+        </item>
+        <item >
+            25
+        </item>
+        <item >
+            35
+        </item>
+        <item >
+            75
+        </item>
+    </array>
+
+    <array name="mainName">
+        <item >
+            מנה כלשהיא
+        </item>
+        <item >
+            מנה כלשהיא
+        </item>
+        <item >
+            מנה כלשהיא
+        </item>
+        <item >
+            מנה כלשהיא
+        </item>
+        <item >
+            מנה כלשהיא
+        </item>
+        <item >
+            מנה כלשהיא
+        </item>
+        <item >
+            מנה כלשהיא
+        </item>
+        <item >
+            מנה כלשהיא
+        </item>
+        <item >
+            מנה כלשהיא
+        </item>
+        <item >
+            מנה כלשהיא
+        </item>
+    </array>
+    <array name="coctailDesc">
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+        <item >
+            אלכוהול מיוחד מאוד
+        </item>
+    </array>
+
+    <array name="coctailPrice">
+        <item >
+            120
+        </item>
+        <item >
+            15
+        </item>
+        <item >
+            30
+        </item>
+        <item >
+            45
+        </item>
+        <item >
+            50
+        </item>
+        <item >
+            85
+        </item>
+        <item >
+            75
+        </item>
+        <item >
+            25
+        </item>
+        <item >
+            35
+        </item>
+        <item >
+            75
+        </item>
+    </array>
+
+    <array name="coctailName">
+        <item >
+            קוקטייל
+        </item>
+        <item >
+            קוקטייל
+        </item>
+        <item >
+            קוקטייל
+        </item>
+        <item >
+            קוקטייל
+        </item>
+        <item >
+            קוקטייל
+        </item>
+        <item >
+            קוקטייל
+        </item>
+        <item >
+            קוקטייל
+        </item>
+        <item >
+            קוקטייל
+        </item>
+        <item >
+            קוקטייל
+        </item>
+        <item >
+            קוקטייל
+        </item>
+    </array>
+
+    <array name="hamburgerDesc">
+        <item >
+            המבורגר מיוחד מאוד
+        </item>
+        <item >
+            המבורגר מיוחד מאוד
+        </item>
+        <item >
+            המבורגר מיוחד מאוד
+        </item>
+        <item >
+            המבורגר מיוחד מאוד
+        </item>
+        <item >
+            המבורגר מיוחד מאוד
+        </item>
+        <item >
+            המבורגר מיוחד מאוד
+        </item>
+        <item >
+            המבורגר מיוחד מאוד
+        </item>
+        <item >
+            המבורגר מיוחד מאוד
+        </item>
+        <item >
+            המבורגר מיוחד מאוד
+        </item>
+        <item >
+            המבורגר מיוחד מאוד
+        </item>
+    </array>
+
+    <array name="hamburgerPrice">
+        <item >
+            120
+        </item>
+        <item >
+            15
+        </item>
+        <item >
+            30
+        </item>
+        <item >
+            45
+        </item>
+        <item >
+            50
+        </item>
+        <item >
+            85
+        </item>
+        <item >
+            75
+        </item>
+        <item >
+            25
+        </item>
+        <item >
+            35
+        </item>
+        <item >
+            75
+        </item>
+    </array>
+
+    <array name="hamburgerName">
+        <item >
+            המבורגר
+        </item>
+        <item >
+            המבורגר
+        </item>
+        <item >
+            המבורגר
+        </item>
+        <item >
+            המבורגר
+        </item>
+        <item >
+            המבורגר
+        </item>
+        <item >
+            המבורגר
+        </item>
+        <item >
+            המבורגר
+        </item>
+        <item >
+            המבורגר
+        </item>
+        <item >
+            המבורגר
+        </item>
+        <item >
+            המבורגר
+        </item>
+    </array>
+
+    <array name="hotDrinkDesc">
+        <item >
+            משקה חם
+        </item>
+        <item >
+            משקה חם
+        </item>
+        <item >
+            משקה חם
+        </item>
+        <item >
+            משקה חם
+        </item>
+        <item >
+            משקה חם
+        </item>
+        <item >
+            משקה חם
+        </item>
+        <item >
+            משקה חם
+        </item>
+        <item >
+            משקה חם
+        </item>
+        <item >
+            משקה חם
+        </item>
+        <item >
+            משקה חם
+        </item>
+    </array>
+
+    <array name="hotDrinkPrice">
+        <item >
+            120
+        </item>
+        <item >
+            15
+        </item>
+        <item >
+            30
+        </item>
+        <item >
+            45
+        </item>
+        <item >
+            50
+        </item>
+        <item >
+            85
+        </item>
+        <item >
+            75
+        </item>
+        <item >
+            25
+        </item>
+        <item >
+            35
+        </item>
+        <item >
+            75
+        </item>
+    </array>
+
+    <array name="hotDrinkName">
+        <item >
+            משקה חם
+        </item>
+        <item >
+            משקה חם
+        </item>
+        <item >
+            משקה חם
+        </item>
+        <item >
+            משקה חם
+        </item>
+        <item >
+            משקה חם
+        </item>
+        <item >
+            משקה חם
+        </item>
+        <item >
+            משקה חם
+        </item>
+        <item >
+            משקה חם
+        </item>
+        <item >
+            משקה חם
+        </item>
+        <item >
+            משקה חם
+        </item>
+    </array>
+    <array name="coldDrinkDesc">
+        <item >
+            משקה קר
+        </item>
+        <item >
+            משקה קר
+        </item>
+        <item >
+            משקה קר
+        </item>
+        <item >
+            משקה קר
+        </item>
+        <item >
+            משקה קר
+        </item>
+        <item >
+            משקה קר
+        </item>
+        <item >
+            משקה קר
+        </item>
+        <item >
+            משקה קר
+        </item>
+        <item >
+            משקה קר
+        </item>
+        <item >
+            משקה קר
+        </item>
+    </array>
+
+    <array name="coldDrinkPrice">
+        <item >
+            120
+        </item>
+        <item >
+            15
+        </item>
+        <item >
+            30
+        </item>
+        <item >
+            45
+        </item>
+        <item >
+            50
+        </item>
+        <item >
+            85
+        </item>
+        <item >
+            75
+        </item>
+        <item >
+            25
+        </item>
+        <item >
+            35
+        </item>
+        <item >
+            75
+        </item>
+    </array>
+
+    <array name="coldDrinkName">
+        <item >
+            משקה קר
+        </item>
+        <item >
+            משקה קר
+        </item>
+        <item >
+            משקה קר
+        </item>
+        <item >
+            משקה קר
+        </item>
+        <item >
+            משקה קר
+        </item>
+        <item >
+            משקה קר
+        </item>
+        <item >
+            משקה קר
+        </item>
+        <item >
+            משקה קר
+        </item>
+        <item >
+            משקה קר
+        </item>
+        <item >
+            משקה קר
+        </item>
+    </array>
+
+
+    <array name="namesOfCategory">
+        <item>
+            תפריט קוקטייל
+        </item>
+        <item>
+            תפריט המבורגים
+        </item>
+        <item>
+            תפריט שתיה קרה
+        </item>
+        <item>
+            תפריט שתיה חמה
+        </item>
+        <item>
+            תפריט מנות ראשיות
+        </item>
+        <item>
+            תפריט אלכוהול
+        </item>
+    </array>
+</resources>
