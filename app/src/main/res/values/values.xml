@@ -3,7 +3,7 @@
 
     <array name="alcoholDesc">
         <item >
-            אלכוהול מיוחד מאוד
+            אוריאל וסרגיי
         </item>
         <item >
             אלכוהול מיוחד מאוד
@@ -36,7 +36,7 @@
 
     <array name="alcoholPrice">
         <item >
-            120
+            55555555555555
         </item>
         <item >
             15
@@ -69,7 +69,7 @@
 
     <array name="alcoholName">
         <item >
-            beer
+            אוריאל וסרגייאוריאל וסרגייאוריאל וסרגיי
         </item>
         <item >
             beer
@@ -102,7 +102,7 @@
 
     <array name="mainDesc">
         <item >
-           מנה ראשית
+           מנה ראשית עם כבד אווז וירקות מגיע במגוון טעמים לבחירה
         </item>
         <item >
             מנה ראשית
@@ -135,7 +135,7 @@
 
     <array name="mainPrice">
         <item >
-            120
+            500
         </item>
         <item >
             15
@@ -168,7 +168,7 @@
 
     <array name="mainName">
         <item >
-            מנה כלשהיא
+            המבורגר
         </item>
         <item >
             מנה כלשהיא

@@ -25,12 +25,12 @@ import java.util.ArrayList;
 public class ShowUsersOnFireBase extends AppCompatActivity {
 
 
-    private ArrayList<String> arraySpinner ;
-    private ArrayList<UserNameClass>allUserNames;
+    private ArrayList<String> arraySpinner;
+    private ArrayList<UserNameClass> allUserNames;
     private Spinner spinner;
 
     // TODO: 10/01/2019 בעזרת הפריסה הזו נוכל לבצע עידכון ללייאוט
-    private  SwipeRefreshLayout swipeRefreshLayout;
+    private SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +45,7 @@ public class ShowUsersOnFireBase extends AppCompatActivity {
 
     private void setTheRefreshMethod() {
 
-         swipeRefreshLayout=findViewById(R.id.swiper);
+        swipeRefreshLayout = findViewById(R.id.swiper);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -66,16 +66,16 @@ public class ShowUsersOnFireBase extends AppCompatActivity {
 
     private void setTheSpinnerItemsFromServer() {
         // TODO: 10/01/2019 טוען אל תוך התיבה הנפתחת את שמות המשתמשים שלנו שקיימים במאגר נתונים
-                FireBaseInit.getFireBaseInit().getDatabase().collection("users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        arraySpinner=new ArrayList<>();
-                        allUserNames=new ArrayList<>();
-                        for (int i = 0; i <task.getResult().getDocuments().size() ; i++) {
-                            UserNameClass userNameClass=task.getResult().getDocuments().get(i).toObject(UserNameClass.class);
-                            arraySpinner.add(userNameClass.getName());
-                            allUserNames.add(userNameClass);
-                        }
+        FireBaseInit.getFireBaseInit().getDatabase().collection("users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                arraySpinner = new ArrayList<>();
+                allUserNames = new ArrayList<>();
+                for (int i = 0; i < task.getResult().getDocuments().size(); i++) {
+                    UserNameClass userNameClass = task.getResult().getDocuments().get(i).toObject(UserNameClass.class);
+                    arraySpinner.add(userNameClass.getName());
+                    allUserNames.add(userNameClass);
+                }
 
                 // TODO: 10/01/2019 טעינת ערכים אל תוך מתאם שהתביה תשתמש בה
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(ShowUsersOnFireBase.this,
@@ -91,7 +91,7 @@ public class ShowUsersOnFireBase extends AppCompatActivity {
 
     private void setTheSpinnerLiseners() {
         // TODO: 10/01/2019 בודק איזה ערך נלחץ בתיבה ומביא ערכים בהתאם
-        spinner=findViewById(R.id.spinner_names_of_users);
+        spinner = findViewById(R.id.spinner_names_of_users);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, final int position, long id) {
@@ -106,17 +106,31 @@ public class ShowUsersOnFireBase extends AppCompatActivity {
     }
 
     private void setTheData(UserNameClass userNameClass) {
-        TextView name,number,area;
+        TextView name, number, area;
         ImageView imageView;
-        imageView=findViewById(R.id.image_of_user_in_show_the_users);
-        name=findViewById(R.id.user_name_in_show_users);
-        area=findViewById(R.id.area_in_show_users);
-        number=findViewById(R.id.phone_in_show_users);
+        imageView = findViewById(R.id.image_of_user_in_show_the_users);
+        name = findViewById(R.id.user_name_in_show_users);
+        area = findViewById(R.id.area_in_show_users);
+        number = findViewById(R.id.phone_in_show_users);
         name.setText(userNameClass.getName());
         area.setText(userNameClass.getArea());
         number.setText(userNameClass.getPhone());
-
-
         userNameClass.getImageFromServer(imageView);
     }
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+

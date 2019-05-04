@@ -26,17 +26,6 @@ public class ShowItems extends Fragment {
         // Required empty public constructor
     }
 
-    private void loadTheRecycler() {
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-        layoutManager.setSmoothScrollbarEnabled(true);
-
-
-        RecyclerView recyclerView = getView().findViewById(R.id.resturant_recycler);
-        recyclerView.setLayoutManager(layoutManager);
-        RecyclerAdapter adapter = new RecyclerAdapter(MenuActivity.pickedList);
-        recyclerView.setAdapter(adapter);
-    }
-
 
 
     @Override
@@ -46,11 +35,7 @@ public class ShowItems extends Fragment {
         return inflater.inflate(R.layout.fragment_show_items, container, false);
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        loadTheRecycler();
-    }
+
 
 
 }

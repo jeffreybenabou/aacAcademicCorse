@@ -51,8 +51,8 @@ public class MediaPlayerActivity extends AppCompatActivity implements View.OnCli
                 .setAutoCancel(true)
                 .setColor(Color.RED)
                 .setVibrate(new long[]{150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150, 150})
-                .addAction(R.mipmap.ic_launcher, "המשך שיר", nextSong)
-                .addAction(R.mipmap.ic_launcher, "עצור שיר", prevSong)
+                .addAction(R.mipmap.ic_launcher, "עצור שיר", nextSong)
+                .addAction(R.mipmap.ic_launcher, "המשך שיר", prevSong)
                 .build();
         notificationManagerCompat.notify(1, notification);
     }

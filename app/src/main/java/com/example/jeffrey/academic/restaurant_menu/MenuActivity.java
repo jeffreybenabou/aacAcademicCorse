@@ -1,9 +1,7 @@
 package com.example.jeffrey.academic.restaurant_menu;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
+import android.support.v4.app.Fragment;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -15,24 +13,31 @@ import android.view.MenuItem;
 
 import com.example.jeffrey.academic.R;
 
+import java.util.ArrayList;
+
 public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    static ArrayList<Item>alcohol=new ArrayList<>();
+    static ArrayList<Item>coctail=new ArrayList<>();
+    static ArrayList<Item>coldDrink=new ArrayList<>();
+    static ArrayList<Item>hamburger=new ArrayList<>();
+    static ArrayList<Item>hotDrink=new ArrayList<>();
+    static ArrayList<Item>main=new ArrayList<>();
+    static ArrayList<Item>pickedList=new ArrayList<>();
+    static Fragment selectedFragmant;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        loadListWithImage();
+
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -42,6 +47,24 @@ public class MenuActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    private void loadListWithImage() {
+        alcohol=createItems(0,R.array.alcoholDesc,R.array.alcoholName,R.array.alcoholPrice);
+
+    }
+
+    private ArrayList<Item> createItems(int numberToAdd, int desc, int name, int price){
+        ArrayList<Item> arrayList=new ArrayList();
+        for (int i = 0; i <10 ; i++) {
+            arrayList.add(new Item(getResources()
+                    .getIdentifier(
+                            "a"+(i+numberToAdd+1),
+                            "drawable", this.getPackageName()),
+                    getResources().getStringArray(desc)[i],getResources()
+                    .getIntArray(price)[i],getResources().getStringArray(name)[i]));
+        }
+        return arrayList;
     }
 
     @Override
@@ -81,9 +104,15 @@ public class MenuActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        switch (id)
+        {
+            case R.id.main_course:
+                pickedList=main;
+                break;
 
-
-
+        }
+        selectedFragmant=new ShowItems();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout,selectedFragmant).commit();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

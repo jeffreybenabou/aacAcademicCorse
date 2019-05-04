@@ -29,6 +29,11 @@
             android:id="@+id/coctail"
             android:icon="@drawable/ic_bar"
             android:title="קוקטליים" />
+
+        <item
+            android:id="@+id/order"
+            android:icon="@drawable/ic_shopping_cart_black_24dp"
+            android:title="תפריט הזמנות" />
     </group>
 
     <item android:title="Communicate">

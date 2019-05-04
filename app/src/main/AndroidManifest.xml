@@ -21,9 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <service
-            android:name=".services.MusicService"
-            ></service>
+        <activity android:name=".restaurant_menu.ShowPickedItem" />
+
+        <service android:name=".services.MusicService" />
 
         <activity android:name=".services.MediaPlayerActivity" />
         <activity android:name=".sensors.LocationActivity" />
@@ -71,12 +71,12 @@
 
         <receiver android:name=".notification.NotificationReciver" />
         <receiver android:name=".services.MusicHandler" />
+
         <service android:name=".firebase_example.answer_and_qestion.ServiceMessage">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
 
         <activity android:name=".firebase_example.firebase_users_data_add_data_change.FireBaseExmaple" />
         <activity android:name=".firebase_example.add_new_user_to_database.GetUserNameDetails" />
